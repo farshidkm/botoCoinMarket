@@ -1,14 +1,25 @@
-.mainTable{
-    max-width: 1180px;
+.search{
+    display: block;
+    width: 500px;
     margin: 50px auto;
-    border: 1px solid #e7e7e7;
+    border: 1px solid green;
+    padding: 10px 20px;
     border-radius: 10px;
-    text-align: center;
 
 }
 
-table, th, td{
-    border-top: 1px solid #e7e7e7;
+
+.mainTable{
+    max-width: 1180px;
+    margin: 50px auto;
+    border: 1px solid #d1d1d1;
+    border-radius: 10px;
+    text-align: center;
+    background-color: #eaeaea;
+}
+
+ td{
+    border-top: 1px solid #d1d1d1;
     border-collapse: collapse;
 }
 
@@ -20,3 +31,6 @@ table, th, td{
 td, th{
     padding: 10px 20px;
 }
+
+
+

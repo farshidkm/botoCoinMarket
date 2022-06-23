@@ -2,6 +2,8 @@ import { useEffect, useState } from "react";
 import { serviceApi } from "../services/serviceApi";
 import styles from "./Home.module.css"
 
+let backupData=[];
+
 function Home(){
     const [data, setData] = useState([]);
     useEffect(()=>{
@@ -12,13 +14,24 @@ function Home(){
             if(result.status === 200){
                 console.log(result.data)
                 setData(result.data);
+                backupData=[...result.data];
             }
         });
 
     },[]);
 
+    function handleSearch(e){
+        let newData = [];
+        console.log(e.target.value);
+        newData = backupData.filter((d)=>{
+            if(d.name.toUpperCase().includes(e.target.value.toUpperCase())) return true;
+        })
+        setData(newData);
+    }
+
     return(
         <>
+            <input className={styles.search} onChange={handleSearch}></input>
             <table className={styles.mainTable}>
                 <thead>
                     <tr>
