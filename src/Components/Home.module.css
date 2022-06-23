@@ -1,0 +1,22 @@
+.mainTable{
+    max-width: 1180px;
+    margin: 50px auto;
+    border: 1px solid #e7e7e7;
+    border-radius: 10px;
+    text-align: center;
+
+}
+
+table, th, td{
+    border-top: 1px solid #e7e7e7;
+    border-collapse: collapse;
+}
+
+
+.mainTable tr img{
+    height: 40px;
+}
+
+td, th{
+    padding: 10px 20px;
+}
